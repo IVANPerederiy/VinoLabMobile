@@ -178,23 +178,19 @@ class _WinePredictionScreenState extends State<WinePredictionScreen>
   }
 
   Color _scoreColor(double s) {
-    if (s >= 85) return const Color(0xFFB8962E);
+    if (s >= 80) return const Color(0xFFB8962E);
     if (s >= 70) return const Color(0xFF6A3A9B);
-    if (s >= 55) return const Color(0xFF7B1A2E);
-    return const Color(0xFF757575);
+    return const Color(0xFF7B1A2E);
   }
 
   String _scoreLabel(double s) {
-    if (s >= 90) return 'Выдающееся';
-    if (s >= 85) return 'Отличное';
-    if (s >= 80) return 'Очень хорошее';
-    if (s >= 70) return 'Хорошее';
-    if (s >= 60) return 'Удовлетворительное';
-    return 'Ординарное';
+    if (s >= 80) return 'Вино высокого качества';
+    if (s >= 70) return 'Вино среднего качества';
+    return 'Вино низкого качества';
   }
 
   String _scoreEmoji(double s) {
-    if (s >= 85) return '🏆';
+    if (s >= 80) return '🏆';
     if (s >= 70) return '🍷';
     if (s >= 55) return '🍇';
     return '📊';
